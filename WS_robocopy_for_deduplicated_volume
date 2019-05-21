@@ -1,0 +1,1 @@
+robocopy "SOURCE" "DESTINATION"  /e /r:2 /w:5 /r:6 /w:5 /MT:64 /zb /it /purge /copyall /v /log:C:\log_robocopy.txt
