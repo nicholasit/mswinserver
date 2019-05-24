@@ -1,0 +1,2 @@
+#if DNS Server not load Active Directory zones, STOP the KDC Service on domain controller and run the following command:
+netdom resetpwd /server:<PDC.domain.com> /userd:<Domain\domain_admin> /passwordd:*
