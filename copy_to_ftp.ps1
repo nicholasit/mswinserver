@@ -1,16 +1,14 @@
-$source = "c:\test"
-$destination = "ftp://localhost:21/New Directory/"
-$username = "test"
-$password = "test"
-# $cred = Get-Credential
-$wc = New-Object System.Net.WebClient
-$wc.Credentials = New-Object System.Net.NetworkCredential($username, $password)
+$source = "c:\source"
+$destination = "ftp://username:password@example.com/destination"
 
-$files = get-childitem $source -recurse -force
+$webclient = New-Object -TypeName System.Net.WebClient
+
+$files = Get-ChildItem $source
+
 foreach ($file in $files)
 {
-    $localfile = $file.fullname
-    # ??????????
-}
-$wc.UploadFile($destination, $source)
-$wc.Dispose()
+    Write-Host "Uploading $file"
+    $webclient.UploadFile("$destination/$file", $file.FullName)
+} 
+
+$webclient.Dispose()
