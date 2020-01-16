@@ -1,15 +1,3 @@
-<#
- .SYNOPSIS
- Select Remote Session State and logs off the user sessions.
- 
- .DESCRIPTION
-  Select REMOTE SESSION STATE (DISCONNECTED/ACTIVE/IDLE/ALL) AND LOGS OFF THE USERS
- SESSIONS.
- 
- .NOTES
-  FILE NAME: RDSESSIONSUPPORT.PS1
- #>
-  
 Write-Host "=============================================="
  Write-Host ""
  Write-Host "          PLEASE SELECT YOUR OPTION          "
