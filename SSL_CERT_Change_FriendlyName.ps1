@@ -1,0 +1,1 @@
+﻿(Get-ChildItem -Path Cert:\LocalMachine\My\XXXXXXXXXXXXXXXXXXCERTIFICATEHASH).FriendlyName = 'nicholasmm'
